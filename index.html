@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/webviewer.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Form Builder</title>
+</head>
+
+<body style="width:100%; height:100%; margin:0px; padding:0px; overflow:hidden">
+    <div class="sidenav">
+        <ul>
+            <li><button id='add-text'>Add text</button></li>
+            <li><button id='add-signature'>Add signature</button></li>
+            <li><button id="add-check-box">Add check box</button></li>
+            <li><button id="add-radio-button">Add radio button</button></li>
+            <li><button id="add-datepicker">Add date form</button></li>
+            <li>
+                <hr>
+            </li>
+            <li><button id="apply-all">Apply all fields</button></li>
+        </ul>
+    </div>
+
+    <div id="viewer" style="height: 100%; overflow: hidden;"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
