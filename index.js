@@ -375,35 +375,24 @@ WebViewer({
         };
 
         function create_date_picker() {
-
-            const widgetFlags = new WidgetFlags();
-
-            // set font type
-            const font = new Annotations.Font({ name: 'Helvetica' });
-
-            // create a form field
-            const field = new Annotations.Forms.Field("some radio field group name", {
-                flags: widgetFlags,
-                font: font,
+            const field = new Annotations.Forms.Field("some text field name", {
+                type: 'Tx',
+                value: '11/30/20',
             });
 
-            // create a widget annotation for the first button
-            const widgetAnnot1 = new Annotations.DatePickerWidgetAnnotation(field, {
-
-            });
-
-            // create a widget annotation for the second button
+            // This line cause a error
+            const widgetAnnot = new Annotations.DatePickerWidgetAnnotation(field);
 
             // set position and size
-            widgetAnnot1.PageNumber = 0;
-            widgetAnnot1.X = 100;
-            widgetAnnot1.Y = 100;
-            widgetAnnot1.Width = 50;
-            widgetAnnot1.Height = 20;
+            widgetAnnot.PageNumber = 1;
+            widgetAnnot.X = 100;
+            widgetAnnot.Y = 100;
+            widgetAnnot.Width = 100;
+            widgetAnnot.Height = 40;
 
             //add the form field and widget annotation
-            annotManager.addAnnotation(widgetAnnot1);
-            annotManager.drawAnnotationsFromList([widgetAnnot1]);
+            annotManager.addAnnotation(widgetAnnot);
+            annotManager.drawAnnotationsFromList([widgetAnnot]);
             annotManager.getFieldManager().addField(field);
         }
 
